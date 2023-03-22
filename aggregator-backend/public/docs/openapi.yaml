@@ -1,0 +1,158 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/register:
+    post:
+      summary: 'Register api'
+      operationId: registerApi
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: ipsam
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: yosinski@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: sunt
+                c_password:
+                  type: string
+                  description: 'The value and <code>password</code> must match.'
+                  example: cumque
+              required:
+                - name
+                - email
+                - password
+                - c_password
+      security: []
+  /api/login:
+    post:
+      summary: 'Login api'
+      operationId: loginApi
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/profile:
+    put:
+      summary: ''
+      operationId: putApiProfile
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: oonhoanhan
+                email:
+                  type: string
+                  description: ''
+                  example: null
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: ',xID6HCenk%R#I:}'
+              required:
+                - name
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
