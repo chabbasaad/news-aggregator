@@ -1,7 +1,9 @@
-# We are using Laravel 10 for jwt authentication based login and signup API. (React.js)
+# We are using Laravel 10 and react js for build a news
+aggregator website that pulls articles from various sources and displays them in a clean,
+easy-to-read format.
 
-We are using Laravel 9 for jwt authentication based login and
-signup API. We use react.js on the frontend.
+We are using Laravel 10 for Api authentication based login and
+signup API and get articles with Get and Post method. We use react.js on the frontend.
 
 ## Follow the steps below to run the API.
 
@@ -19,13 +21,8 @@ npm install
 
 npm run serve
 
-![image]()
-![image]()
-![image]()
 
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
